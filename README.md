@@ -42,4 +42,4 @@ jobs:
 ```yaml
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-``
+```
