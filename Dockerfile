@@ -5,4 +5,4 @@ RUN pip install -r requirements.txt
 
 COPY triage.py triage.py
 
-CMD ls
+ENTRYPOINT [ "python triage.py" ]
