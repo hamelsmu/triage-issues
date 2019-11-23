@@ -1,3 +1,5 @@
+![Actions Status](https://github.com/machine-learning-apps/kubeflow-triage/workflows/Tests/badge.svg)
+
 # Triage Issues For Kubeflow
 A GitHub Action that triages issues for the [Kubeflow](https://github.com/kubeflow/) project.
 
