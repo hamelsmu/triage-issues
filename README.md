@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update Kanban
-        uses: machine-learning-apps/kubeflow-triage@master
+        uses: kubeflow/triage-issues@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -36,12 +36,6 @@ jobs:
 
 1. **PROJECT_CARD_ID**: The Project Card ID that you want to move issues to.  Defaults to `MDEzOlByb2plY3RDb2x1bW41OTM0MzEz`
 2. **ISSUE_NUMBER**: The issue number in the current repo that you want to triage
-
-**Also, you must supply the GITHUB_TOKEN from the Action environment as an environment variable**, which can be accomplished like so:
-
-```yaml
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
+3. **PERSONAL_ACCESS_TOKEN**: A personal access token with authorization to modify the project board.
 
 
