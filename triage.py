@@ -14,6 +14,7 @@ import json
 
 PROJECT_CARD_ID = os.getenv('INPUT_PROJECT_CARD_ID')
 ISSUE_NUMBER = os.getenv('INPUT_ISSUE_NUMBER')
+REPO = os.getenv('GITHUB_REPOSITORY')
 
 assert PROJECT_CARD_ID, "Input PROJECT_CARD_ID not supplied."
 assert ISSUE_NUMBER, "Input ISSUE_NUMBER not supplied."
@@ -793,6 +794,6 @@ if __name__ == "__main__":
                     )
   
   triager = IssueTriage()
-  url = f"https://github.com/{OWNER}/issues/{ISSUE_NUMBER}"
+  url = f"https://github.com/{REPO}/issues/{ISSUE_NUMBER}"
   
   logging.debug(f'Triaging issue {ISSUE_NUMBER} - {url}')
