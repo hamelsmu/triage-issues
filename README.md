@@ -25,11 +25,10 @@ jobs:
     steps:
       - name: Update Kanban
         uses: kubeflow/triage-issues@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           PROJECT_CARD_ID: 'MDEzOlByb2plY3RDb2x1bW41OTM0MzEz'
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.triage_projects_github_token }}
 ```
 
 ## Mandatory Inputs
