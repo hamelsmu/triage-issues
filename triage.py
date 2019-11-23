@@ -797,3 +797,6 @@ if __name__ == "__main__":
   url = f"https://github.com/{REPO}/issues/{ISSUE_NUMBER}"
   
   logging.debug(f'Triaging issue {ISSUE_NUMBER} - {url}')
+  
+  #issue_info = triager.triage_issue(url)
+  #logging.debug(issue_info)
