@@ -36,3 +36,10 @@ jobs:
 
 1. `PROJECT_CARD_ID`: The Project Card ID that you want to move issues to.
 2. `ISSUE_NUMBER`: The issue number in the current repo that you want to triage
+
+**Also, you must supply the GITHUB_TOKEN from the Action environment as an environment variable**, which can be accomplished like so:
+
+```yaml
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+``
