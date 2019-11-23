@@ -10,7 +10,7 @@ inputs:
     required: true
 branding:
   color: 'blue'
-  icon: 'trello'
+  icon: 'check-square'
 runs:
   using: 'docker'
   image: 'docker://hamelsmu/kubeflow-triage'
