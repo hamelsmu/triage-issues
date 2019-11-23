@@ -1,0 +1,16 @@
+name: 'Triage Kubeflow Issues'
+description: Triage issues for the kubeflow project.  https://github.com/kubeflow/
+author: Hamel Husain
+inputs:
+  PROJECT_CARD_ID:
+    description: The Project Card ID that you want to move issues to.
+    required: true
+  ISSUE_NUMBER:
+    description: The issue number in the current repo that you want to triage.
+    required: true
+branding:
+  color: 'blue'
+  icon: 'check-square'
+runs:
+  using: 'docker'
+  image: 'docker://hamelsmu/kubeflow-triage'
