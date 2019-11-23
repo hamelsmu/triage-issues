@@ -13,22 +13,22 @@ A GitHub Action that triages issues for the [Kubeflow](https://github.com/kubefl
 ## Example Workflow
 
 ```yaml
-name: Issue-Triage
+name: Check Triage Status of Issue
 on: 
   issues:
     types: [opened, closed, reopened, transferred, labeled, unlabeled]
     # Issue is created, Issue is closed, Issue added or removed from projects, Labels added/removed
 
 jobs:
-  triage:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Triage Issue
+      - name: Update Kanban
         uses: machine-learning-apps/kubeflow-triage@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          PROJECT_CARD_ID: 1 #test id
+          PROJECT_CARD_ID: 'MDEzOlByb2plY3RDb2x1bW41OTM0MzEz'
           ISSUE_NUMBER: ${{ github.event.issue.number }}
 ```
 
@@ -43,3 +43,5 @@ jobs:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+
